@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>下載頁面</title>
+</head>
+<body>
+  <h1>可下載檔案列表</h1>
+  <ul>
+    {% for file in files %}
+      <li><a href="{{ url_for('download_file', filename=file) }}">{{ file }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
